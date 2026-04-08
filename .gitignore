@@ -1,0 +1,5 @@
+node_modules
+.next/
+.next.detached-backup/
+tsconfig.tsbuildinfo
+.env.local

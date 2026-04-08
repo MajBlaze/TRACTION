@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "logo",
+      "description": "TRACTION Logo - Modern Financial Growth Icon",
+      "imageUrl": "https://picsum.photos/seed/traction-success-graph/400/400",
+      "imageHint": "growth chart"
+    }
+  ]
+}

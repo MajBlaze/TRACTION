@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 235 15% 98%;
+    --foreground: 235 15% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 235 15% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 235 15% 10%;
+    --primary: 235 65% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 235 15% 92%;
+    --secondary-foreground: 235 15% 10%;
+    --muted: 235 15% 92%;
+    --muted-foreground: 235 15% 45%;
+    --accent: 205 75% 70%;
+    --accent-foreground: 235 15% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 235 15% 85%;
+    --input: 235 15% 85%;
+    --ring: 235 65% 65%;
+    --radius: 1rem;
+    --chart-1: 235 65% 65%;
+    --chart-2: 205 75% 70%;
+    --chart-3: 160 60% 45%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 30 80% 55%;
+  }
+
+  .dark {
+    --background: 235 15% 8%;
+    --foreground: 235 10% 95%;
+    --card: 235 15% 12%;
+    --card-foreground: 235 10% 95%;
+    --popover: 235 15% 10%;
+    --popover-foreground: 235 10% 95%;
+    --primary: 235 65% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 235 15% 18%;
+    --secondary-foreground: 235 10% 95%;
+    --muted: 235 15% 18%;
+    --muted-foreground: 235 10% 65%;
+    --accent: 205 75% 70%;
+    --accent-foreground: 235 15% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 235 15% 20%;
+    --input: 235 15% 20%;
+    --ring: 235 65% 65%;
+  }
+
+  /* Theme Accents */
+  .theme-blue { --primary: 220 70% 50%; --ring: 220 70% 50%; }
+  .theme-green { --primary: 142 70% 45%; --ring: 142 70% 45%; }
+  .theme-purple { --primary: 270 70% 60%; --ring: 270 70% 60%; }
+  .theme-orange { --primary: 24 95% 53%; --ring: 24 95% 53%; }
+  .theme-pink { --primary: 328 92% 58%; --ring: 328 92% 58%; --accent: 336 100% 72%; }
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body transition-colors duration-300;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  a,
+  button,
+  label,
+  [role="button"],
+  summary,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    cursor: pointer;
+  }
+
+  textarea,
+  [contenteditable="true"],
+  input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]) {
+    cursor: text;
+  }
+}
+
+@layer utilities {
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+.glass {
+  @apply bg-card/60 backdrop-blur-md border border-white/10;
+}
+
+.count-up-animation {
+  animation: countUp 1s ease-out forwards;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10%;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.82) 55%, rgba(255, 255, 255, 0.18));
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.65), 0 0 22px rgba(190, 225, 255, 0.28);
+  animation-name: snowfall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.snowflake-far {
+  filter: blur(1px);
+}
+
+.cursorify-white {
+  opacity: 0.92;
+  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.4));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .has-custom-cursor,
+  .has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translate3d(0, -10vh, 0) scale(0.92);
+  }
+  25% {
+    transform: translate3d(12px, 22vh, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-10px, 50vh, 0) scale(0.95);
+  }
+  75% {
+    transform: translate3d(10px, 78vh, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(-6px, 110vh, 0) scale(0.9);
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "id": "1ca1a71a304548d3970d0cbde9a7d283",
+      "username": "ARYAN",
+      "email": "anju40726@gmail.com",
+      "createdAt": "2026-04-08T05:19:22.381Z",
+      "passwordHash": "26f67a2cc10c65817a46a1058860a4f1:bbf5b32625b1b12729f9f0c608f0449d8dbfa3be3d02bdae44785b63795bd2d720c750914f37e9affd2607a8e6cbfec594c3608fa6aad4e6ff60ec1973affcff",
+      "appData": {
+        "expenses": [],
+        "groups": [],
+        "tasks": [],
+        "budget": 5000
+      }
+    },
+    {
+      "id": "679520550c0c3263c8df74d02def9056",
+      "username": "BLAZE",
+      "email": "duddududdjc@gmail.com",
+      "createdAt": "2026-04-08T05:38:49.870Z",
+      "authProvider": "google",
+      "appData": {
+        "expenses": [
+          {
+            "amount": 70,
+            "category": "Transportation",
+            "date": "2026-04-08",
+            "note": "BUS",
+            "id": "6e638658-832f-44d9-a385-5ac9d02e5e70"
+          }
+        ],
+        "groups": [],
+        "tasks": [],
+        "budget": 5000
+      }
+    }
+  ],
+  "sessions": [
+    {
+      "token": "74c19dee14cf4eee80385c69a878e4dcceac2750ba3ff97e8f566dbf98091375",
+      "userId": "679520550c0c3263c8df74d02def9056",
+      "createdAt": "2026-04-08T05:38:49.876Z"
+    }
+  ]
+}
