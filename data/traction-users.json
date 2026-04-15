@@ -27,19 +27,46 @@
             "date": "2026-04-08",
             "note": "BUS",
             "id": "6e638658-832f-44d9-a385-5ac9d02e5e70"
+          },
+          {
+            "amount": 120,
+            "category": "Transportation",
+            "date": "2026-04-15",
+            "note": "",
+            "id": "1604d43e-6be8-4e6a-b21a-3bbe2165f4b8"
+          },
+          {
+            "amount": 40,
+            "category": "Food & Dining",
+            "date": "2026-04-15",
+            "note": "",
+            "id": "67ac3d02-3983-47bd-b56b-3903a00c6b50"
           }
         ],
-        "groups": [],
-        "tasks": [],
+        "groups": [
+          {
+            "id": "e1f1856f-7e10-4116-8f15-df838bf3ca8c",
+            "name": "UK TRIP",
+            "code": "7ZUS3A",
+            "members": [
+              "You"
+            ]
+          }
+        ],
+        "tasks": [
+          {
+            "name": "EXAM",
+            "dueDate": "2026-04-23",
+            "dueTime": "",
+            "priority": "high",
+            "isReminder": false,
+            "id": "a5d10a61-7e1b-493d-b2eb-d9bef752e80b",
+            "isCompleted": false
+          }
+        ],
         "budget": 5000
       }
     }
   ],
-  "sessions": [
-    {
-      "token": "74c19dee14cf4eee80385c69a878e4dcceac2750ba3ff97e8f566dbf98091375",
-      "userId": "679520550c0c3263c8df74d02def9056",
-      "createdAt": "2026-04-08T05:38:49.876Z"
-    }
-  ]
+  "sessions": []
 }
