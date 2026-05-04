@@ -44,7 +44,9 @@ export function googleSignIn(_auth?: null) {
   const config = getSupabaseConfig();
 
   if (!config) {
-    throw new Error('Supabase is not configured for Google sign-in.');
+    throw new Error(
+      'Supabase is not configured for Google sign-in. Use your real project URL (https://<project-ref>.supabase.co) in NEXT_PUBLIC_SUPABASE_URL and set NEXT_PUBLIC_SUPABASE_ANON_KEY (or NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY).'
+    );
   }
 
   const supabase = createBrowserClient(config.url, config.publishableKey);
